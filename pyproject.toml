@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fla2svg"
+version = "1.0.0"
+description = "Convert shapes from legacy binary Adobe/Macromedia Flash (.fla) files into vector SVG"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "olefile>=0.46",
+]
+
+[project.scripts]
+fla2svg = "fla2svg.cli:main"
+
+[tool.setuptools]
+packages = ["fla2svg"]
